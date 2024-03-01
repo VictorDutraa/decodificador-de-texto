@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
+header img {
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --bg-color: #CED4DA;
+    --boxes-bg-color: white;
+    --text-dark-color: #343A40;
+    --theme: #343A40;
+    --highlight-text-color: white;
+    --shadow-color: rgb(124, 120, 120);
+    --border-color: black;
+    --font-family: "Inter", sans-serif;
+    --output-title: #15171a;
+    --output-text: #495057;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+}
+
+#texto::placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1.2rem;
+    margin-top: 0.6rem;
+    color: var(--text-dark-color);
+    background-color: var(--boxes-bg-color);
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: var(--font-family);
+}
+
+#texto {
+    border: 0.5px solid var(--border-color);
+    
+    height: 10rem;
+    width: 20rem;
+    font-size: 2rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: var(--font-family);
+    padding-left: 1.2rem;
+    padding-top: 0.6rem;
+    padding-right: 1.2rem;
+    
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.botoes__crip, .botoes__descrip:hover{
+    cursor: pointer;
+}
+
+.botoes__crip, .botoes__descrip {
+    border: 0.5px solid var(--border-color);
+    border-radius: 20rem;
+    width: 15rem;
+    height: 3rem;
+}
+
+.botoes__crip{
+    background-color: var(--theme);
+    color: var(--highlight-text-color);
+}
+
+.botoes__descrip {
+    color: var(--text-dark-color);
+    background-color: var(--bg-color);
+}
+
+.output-box {
+    background-color: var(--boxes-bg-color);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    box-shadow: 2px 2px 5px var(--shadow-color);
+    h2 {
+        color: var(--output-title);
+    }
+    p {
+        color: var(output-text);
+    }
+}
+
+/* 
+
+Font
+Inter
+Weight
+400
+Size
+12px
+
+Font
+Inter
+Weight
+400
+Size
+16px
+
+Inter
+Weight
+400
+Size
+16px
+
+Font
+Inter
+Weight
+700
+Size
+24px
+
+Font
+Inter
+Weight
+400
+Size
+16px
+*/
