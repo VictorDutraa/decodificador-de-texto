@@ -9,16 +9,20 @@
     <body>
         <header>
             <img src="assets/logo.png" alt="logo da alura">
+            <h1>Decodifier</h1>
         </header>
 
         <main>
-            <!-- input do texto -->
-            <textarea name="texto" id="texto" wrap="soft" placeholder="Digite seu texto"></textarea>
-
-            <!-- aviso de restrições -->
+            
             <section class="input-box">
-                <img id="alerta" src="assets/alert.png" alt="icone de alerta">
-                <label for="alerta">Apenas letras minúsculas e sem acento.</label>
+                <!-- input do texto -->
+                <textarea id="texto" placeholder="Digite seu texto"></textarea>
+
+                <!-- aviso de restrições -->
+                <div class="input-box__alert">
+                    <img id="alerta" src="assets/alert.png" alt="icone de alerta">
+                    <label for="alerta">Apenas letras minúsculas e sem acento.</label>
+                </div>
             </section>
 
             <!-- botões de comando -->
@@ -34,7 +38,7 @@
                 <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
             </section>
 
-        </main>
+        </main> 
 
         <script src="script.js"></script>
     </body>
