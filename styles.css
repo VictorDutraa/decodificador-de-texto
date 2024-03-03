@@ -6,14 +6,13 @@
     box-sizing: border-box;
 }
 
-header h1 {
-    color: var(--theme);
+header {
+    display: flex;
+    gap: 1rem;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header h1 {
+    color: var(--theme);
 }
 
 :root {
@@ -37,12 +36,6 @@ body {
     font-family: var(--font-family);
 }
 
-.input-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .input-box__alert{
         display: flex;
         align-items: center;
@@ -63,16 +56,8 @@ body {
 
 #texto {
     border: 0.5px solid var(--border-color);
-    /* word-wrap: break-word;
-    word-break: break-all; */
     font-family: var(--font-family);
     background-color: var(--bg-color);
-}
-
-.botoes {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
 }
 
 .botoes__crip, .botoes__descrip:hover{
@@ -82,6 +67,7 @@ body {
 .botoes__crip, .botoes__descrip {
     border: 0.5px solid var(--border-color);
     border-radius: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .botoes__crip{
@@ -110,173 +96,56 @@ body {
    
 }
 
+/* VERY SMALL DEVICES */
+@media (max-width: 340px){
 
-/* responsiveness*/
-
-
-/* desktops */
-@media (max-width: 3760px){
+    * {
+        scale: 95%;
+    }
     
     header {
         display: flex;
         align-items: end;
         width: 100%;
-        
-        img {
-            margin-left: 4.6rem;
-            margin-top: 4.6rem;
-        }
-         h1 {
-            margin-left: 36%;
-        } 
     }
 
     main {
-        /* border: 2px solid rgb(18, 255, 18); */
-        flex-direction: row;
-        gap: 5rem;
-        justify-content: center;
-        width: 40rem;
-    }
-
-    .input-box {
-        /* border: 2px solid red; */
-        align-items: flex-start;
-        width: 40rem;
-        margin-top: 5rem;
-        gap: 1rem;
-    }
-
-    #texto{
-        height: 21rem;
-        font-size: 2rem;
-        width: 40rem;
-        padding-top: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    #texto::placeholder {
-        font-size: 2rem;   
-    }  
-
-    .botoes {
-        flex-direction: row;
-    }
-
-    .botoes__crip, .botoes__descrip {
-        width: 20rem;
-        height: 4.1rem;
-    }
-
-    .output-empty-box {
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
-        align-items: center;
-        width: 25rem;
-        height: 40rem;
-        border-radius: 2rem;
         gap: 1rem;
-        margin-top: 1rem;
-
-        /* img{
-            width: 336px;
-            height: 304px;
-        } */
-        h2, p {
-            text-align: center;
-        }
-        h2 {
-            font-size: 1.5rem;
-            
-
-        }
-        p {
-            font-size: 1rem;
-        }
-    }
-
-    .output-box {
-        display: flex;
-        flex-direction: column;
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-        background-color: var(--boxes-bg-color);
-        border-radius: 2rem;
-        align-items: center;
-        box-shadow: 2px 2px 5px var(--shadow-color);
-        font-size: 1.5rem;
-        width: 43rem;
-        p {
-            color: var(output-text);
-            margin: 2rem;
-        }
-        button {
-            border: 0.5px solid var(--border-color);
-            border-radius: 20rem;
-            width: 39rem;
-            height: 4.1rem;
-            background-color: var(--theme);
-            color: var(--highlight-text-color);
-            color: var(--text-dark-color);
-            background-color: var(--boxes-bg-color);
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-        display: none;
-    }
-}
-
-/* tablets */
-@media(max-width: 1072px){
-    
-    header {
-        display: flex;
-        align-items: end;
         width: 100%;
-        
-        img {
-            margin-left: 2.5rem;
-            margin-top: 4.58875rem;
-        }
-         h1 {
-            margin-left: 32%;
-        } 
-    }
-
-    main {
-        /* border: 2px solid rgb(18, 255, 18); */
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        justify-content: center;
-        width: 40rem;
     }
 
     .input-box {
-        /* border: 2px solid red; */
-        align-items: flex-start;
-        width: 40rem;
-        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .input-box__alert{
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
     }
 
     #texto{
         height: 21rem;
         font-size: 2rem;
-        width: 40rem;
-        padding-top: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        width: 18rem;
     }
 
     #texto::placeholder {
-        font-size: 2rem;   
-    }  
+        font-size: 2rem;
+    }
 
     .botoes {
-        flex-direction: row;
         /* margin-top: 1rem; */
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 0.5rem;
     }
 
     .botoes__crip, .botoes__descrip {
@@ -289,20 +158,27 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 43rem;
+        width: 19rem;
         height: 11.625rem;
         border-radius: 2rem;
         gap: 1rem;
         margin-top: 1rem;
+        
+        h2, p{
+            width: 16.4375rem;
+        }
+
         img {
             display: none;
         }
+
         h2 {
             font-size: 1.5rem;
         }
         p {
             font-size: 1rem;
         }
+        
     }
 
     .output-box {
@@ -315,7 +191,7 @@ body {
         align-items: center;
         box-shadow: 2px 2px 5px var(--shadow-color);
         font-size: 1.5rem;
-        width: 43rem;
+        width: 19rem;
         p {
             color: var(output-text);
             margin: 2rem;
@@ -323,20 +199,20 @@ body {
         button {
             border: 0.5px solid var(--border-color);
             border-radius: 20rem;
-            width: 39rem;
+            width: 17rem;
             height: 4.1rem;
             background-color: var(--theme);
             color: var(--highlight-text-color);
             color: var(--text-dark-color);
             background-color: var(--boxes-bg-color);
             margin-bottom: 2rem;
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
     }
 }
 
-/* smartphones */
-@media (max-width: 684px){
+/* SMARTPHONES IN GENERAL*/
+@media (min-width: 340px) and (max-width: 684px) {
 
     header {
         display: flex;
@@ -346,24 +222,29 @@ body {
             margin-left: 1rem;
             margin-top: 1.5rem;
         }
-         h1 {
-            margin-left: 16%;
-        } 
     }
 
     main {
         /* border: 2px solid rgb(18, 255, 18); */
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 21.4375rem;
-        flex-direction: column;
         gap: 1rem;
     }
 
     .input-box {
         /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 21rem;
-        margin-top: 5rem;
+        margin-top: 4rem;
+    }
+
+    .input-box__alert{
+        margin-top: 0.5rem;
     }
 
     #texto{
@@ -378,7 +259,10 @@ body {
 
     .botoes {
         /* margin-top: 1rem; */
+        display: flex;
         flex-direction: column;
+        gap: 1rem;
+        margin-top: 0.5rem;
     }
 
     .botoes__crip, .botoes__descrip {
@@ -439,9 +323,250 @@ body {
             color: var(--text-dark-color);
             background-color: var(--boxes-bg-color);
             margin-bottom: 2rem;
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
     }
 
 }
+
+/* TABLETS */
+@media (min-width: 684px) and (max-width: 1072px)  {
+    
+    header {
+        display: flex;
+        align-items: end;
+        width: 100%;
+        
+        img {
+            margin-left: 2.5rem;
+            margin-top: 2.5rem;
+        }
+    }
+
+    main {
+        /* border: 2px solid rgb(18, 255, 18); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 45rem;
+        
+    }
+
+    .input-box {
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;     
+        align-items: flex-start;  
+        width: 40rem;
+        gap: 1rem;
+    }
+
+    #texto{
+        height: 21rem;
+        font-size: 2rem;
+        width: 40rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 2rem;
+    }
+
+    #texto::placeholder {
+        font-size: 2rem;   
+    }  
+
+    .botoes {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        gap: 1.5rem;
+        /* margin-top: 1rem; */
+    }
+
+    .botoes__crip, .botoes__descrip {
+        width: 19rem;
+        height: 4.1rem;
+        font-size: 1.2rem;
+    }
+
+    .output-empty-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 43rem;
+        height: 11.625rem;
+        border-radius: 2rem;
+        gap: 1rem;
+        margin-top: 1rem;
+        img {
+            display: none;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .output-box {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        background-color: var(--boxes-bg-color);
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 2px 2px 5px var(--shadow-color);
+        font-size: 1.5rem;
+        width: 43rem;
+        p {
+            color: var(output-text);
+            margin: 2rem;
+        }
+        button {
+            border: 0.5px solid var(--border-color);
+            border-radius: 20rem;
+            width: 39rem;
+            height: 4.1rem;
+            background-color: var(--theme);
+            color: var(--highlight-text-color);
+            color: var(--text-dark-color);
+            background-color: var(--boxes-bg-color);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/* DESKTOPS */
+@media (min-width: 1072px) and (max-width: 3760px){
+    
+    header {
+        display: flex;
+        align-items: end;
+        width: 100%;
+        
+        img {
+            margin-left: 4.6rem;
+            margin-top: 4.6rem;
+        }
+    
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        /* border: 2px solid rgb(255, 34, 18); */
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        justify-content: center;
+        width: 40rem;
+    }
+
+    .input-box {
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;       
+        align-items: flex-start;
+        width: 40rem;
+        margin-top: 5rem;
+        gap: 1rem;
+    }
+
+    #texto{
+        height: 21rem;
+        font-size: 2rem;
+        width: 40rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #texto::placeholder {
+        font-size: 2rem;   
+    }  
+
+    .botoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40rem;
+    }
+
+    .botoes__crip, .botoes__descrip {
+        width: 19rem;
+        height: 4.1rem;
+    }
+
+    .output-empty-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25rem;
+        height: 40rem;
+        border-radius: 2rem;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        /* img{
+            width: 336px;
+            height: 304px;
+        } */
+        h2, p {
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.5rem;
+            
+
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .output-box {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        background-color: var(--boxes-bg-color);
+        border-radius: 2rem;
+        align-items: center;
+        box-shadow: 2px 2px 5px var(--shadow-color);
+        font-size: 1.5rem;
+        width: 43rem;
+        p {
+            color: var(output-text);
+            margin: 2rem;
+        }
+        button {
+            border: 0.5px solid var(--border-color);
+            border-radius: 20rem;
+            width: 39rem;
+            height: 4.1rem;
+            background-color: var(--theme);
+            color: var(--highlight-text-color);
+            color: var(--text-dark-color);
+            background-color: var(--boxes-bg-color);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        display: none;
+    }
+}
+
+
+
+
 
