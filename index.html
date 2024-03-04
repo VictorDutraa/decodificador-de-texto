@@ -16,12 +16,12 @@
             
             <section class="input-box">
                 <!-- input do texto -->
-                <textarea id="texto" placeholder="Digite seu texto"></textarea>
+                <textarea id="texto"  placeholder="Digite seu texto" wrap="hard"></textarea>
 
                 <!-- aviso de restrições -->
                 <div class="input-box__alert">
                     <img id="alerta" src="assets/alert.png" alt="icone de alerta">
-                    <label for="alerta">Apenas letras minúsculas e sem acento.</label>
+                    <p>Apenas letras minúsculas e sem acento.</p>
                 </div>
 
                 <!-- botões de comando -->
@@ -34,14 +34,14 @@
   
             <!-- saida inicial vazia -->
             <section class="output-empty-box">
-                <img src="assets/not-found-text.png"         alt="garoto com lupa olhando um diamante">
+                <img src="assets/not-found-text.png" alt="garoto com lupa olhando um diamante">
                 <h2>Nenhuma mensagem encontrada</h2>
                 <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
             </section>
 
             <!-- texto modificado -->
             <section class="output-box">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusamus suscipit consequuntur voluptatum dolores saepe fugiat ea earum, minus, dolore eum! Deleniti odio ut asperiores itaque officia molestiae quis cupiditate. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quibusdam illo. Nulla, sapiente, voluptas earum tempora dolor delectus ad sunt repudiandae veritatis numquam assumenda. Ratione doloremque libero iure assumenda soluta! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium ut eaque quis odio amet laboriosam debitis, eum hic alias ducimus temporibus qui in reiciendis sed? Ex sit accusantium vero facere!</p>
+                <p class = "output-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusamus suscipit consequuntur voluptatum dolores saepe fugiat ea earum, minus, dolore eum! Deleniti odio ut asperiores itaque officia molestiae quis cupiditate. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quibusdam illo. Nulla, sapiente, voluptas earum tempora dolor delectus ad sunt repudiandae veritatis numquam assumenda. Ratione doloremque libero iure assumenda soluta! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium ut eaque quis odio amet laboriosam debitis, eum hic alias ducimus temporibus qui in reiciendis sed? Ex sit accusantium vero facere!</p>
 
                 <button class="output-box__copy-text-button" type="button">Copiar</button>
 
