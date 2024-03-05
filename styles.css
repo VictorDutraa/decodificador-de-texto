@@ -103,7 +103,7 @@ body {
 
 
 /* VERY SMALL DEVICES */
-@media (max-width: 340px){
+@media (max-width: 340px){ 
 
     * {
         scale: 95%;
@@ -170,13 +170,7 @@ body {
         gap: 1rem;
         margin-top: 1rem;
         
-        h2, p{
-            width: 16.4375rem;
-        }
-
-        img {
-            display: none;
-        }
+        
 
         h2 {
             font-size: 1.5rem;
@@ -184,7 +178,18 @@ body {
         p {
             font-size: 1rem;
         }
-        
+    }
+
+    #garoto-lupa {
+        display: none;
+    }
+
+    .nenhuma-msg {
+        width: 16.4375rem;
+    }
+
+    .digite-algo {
+        width: 16.4375rem;
     }
 
     .output-box {
@@ -192,7 +197,7 @@ body {
         margin-bottom: 1.5rem;
         background-color: var(--boxes-bg-color);
         border-radius: 2rem;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         box-shadow: 2px 2px 5px var(--shadow-color);
@@ -203,7 +208,7 @@ body {
             margin: 2rem;
             height: 100%;
             width: 19rem;
-            overflow:scroll;  
+            overflow: scroll;  
         }
         button {
             border: 0.5px solid var(--border-color);
@@ -217,12 +222,24 @@ body {
             margin-bottom: 2rem;
             font-size: 1.5rem;
         }
-        display: none;
+    }
+    
+    .output-box__copy-text-button{
+        border: 0.5px solid var(--border-color);
+        border-radius: 20rem;
+        width: 17rem;
+        height: 4.1rem;
+        background-color: var(--theme);
+        color: var(--highlight-text-color);
+        color: var(--text-dark-color);
+        background-color: var(--boxes-bg-color);
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
     }
 }
 
 /* SMARTPHONES IN GENERAL*/
-@media (min-width: 340px) and (max-width: 684px) {
+@media  (min-width: 341px) and (max-width: 684px) {
 
     header {
         display: flex;
@@ -291,12 +308,8 @@ body {
         gap: 1rem;
         margin-top: 1rem;
         
-        h2, p{
+        h2, p {
             width: 16.4375rem;
-        }
-
-        img {
-            display: none;
         }
 
         h2 {
@@ -309,12 +322,23 @@ body {
         
     }
 
+    #garoto-lupa {
+        display: none;
+    }
+    .nenhuma-msg {
+        width: 16.4375rem;
+    }
+
+    .digite-algo {
+        width: 16.4375rem;
+    }
+    
     .output-box {
         margin-top: 1rem;
         margin-bottom: 1.5rem;
         background-color: var(--boxes-bg-color);
         border-radius: 2rem;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         box-shadow: 2px 2px 5px var(--shadow-color);
@@ -327,25 +351,26 @@ body {
             width: 19rem;
             overflow:scroll;  
         }
-        button {
-            border: 0.5px solid var(--border-color);
-            border-radius: 20rem;
-            width: 17rem;
-            height: 4.1rem;
-            background-color: var(--theme);
-            color: var(--highlight-text-color);
-            color: var(--text-dark-color);
-            background-color: var(--boxes-bg-color);
-            margin-bottom: 2rem;
-            font-size: 1.5rem;
-        }
-        display: none;
+        
+    }
+
+    .output-box__copy-text-button{
+        border: 0.5px solid var(--border-color);
+        border-radius: 20rem;
+        width: 17rem;
+        height: 4.1rem;
+        background-color: var(--theme);
+        color: var(--highlight-text-color);
+        color: var(--text-dark-color);
+        background-color: var(--boxes-bg-color);
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
     }
 
 }
 
 /* TABLETS */
-@media (min-width: 684px) and (max-width: 1362px)  {
+@media (min-width: 685px) and (max-width: 1362px)  {
     
     header {
         display: flex;
@@ -416,9 +441,7 @@ body {
         border-radius: 2rem;
         gap: 1rem;
         margin-top: 1rem;
-        img {
-            display: none;
-        }
+        
         h2 {
             font-size: 1.5rem;
         }
@@ -426,6 +449,10 @@ body {
             font-size: 1rem;
         }
         
+    }
+
+    #garoto-lupa {
+        display: none;
     }
 
     .output-box {
@@ -460,10 +487,23 @@ body {
         }
         display: none;
     }
+
+    .output-box__copy-text-button{
+        border: 0.5px solid var(--border-color);
+        border-radius: 20rem;
+        width: 17rem;
+        height: 4.1rem;
+        background-color: var(--theme);
+        color: var(--highlight-text-color);
+        color: var(--text-dark-color);
+        background-color: var(--boxes-bg-color);
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
 }
 
 /* DESKTOPS */
-@media (min-width: 1362px) and (max-width: 3760px){
+@media (min-width: 1363px) and (max-width: 3760px){
     
     header {
         display: flex;
@@ -538,10 +578,9 @@ body {
         gap: 1rem;
         margin-top: 1rem;
 
-        /* img{
-            width: 336px;
-            height: 304px;
-        } */
+        img {
+            display: flex;
+        } 
         h2, p {
             text-align: center;
         }
@@ -554,7 +593,7 @@ body {
     }
 
     .output-box {
-        display: flex;
+        display: none;
         flex-direction: column;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
@@ -584,11 +623,23 @@ body {
             margin-bottom: 2rem;
             font-size: 1.5rem;
         }
-        display: none;
+        
+    }
+
+    #garoto-lupa {
+        display: flex;
+    }
+
+    .output-box__copy-text-button{
+        border: 0.5px solid var(--border-color);
+        border-radius: 20rem;
+        width: 17rem;
+        height: 4.1rem;
+        background-color: var(--theme);
+        color: var(--highlight-text-color);
+        color: var(--text-dark-color);
+        background-color: var(--boxes-bg-color);
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
     }
 }
-
-
-
-
-
