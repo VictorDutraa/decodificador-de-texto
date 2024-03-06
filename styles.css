@@ -43,11 +43,9 @@ body {
 }
 
 #texto::placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 1.2rem;
-    margin-top: 0.6rem;
+    
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
     color: var(--text-dark-color);
     background-color: var(--bg-color);
     font-weight: 400;
